@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phân Tích Lỗi Sai</title>
+    <link rel="icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mathlive"></script>
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$']]
+      },
+      svg: { fontCache: 'global' }
+    };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>🧠 Phân Tích Lỗi Sai</h1>
+    <p class="subtitle">Nhập bài toán hoặc câu hỏi của bạn</p>
+    <math-field id="question" placeholder="Nhập bài toán..."></math-field>
+    <textarea id="user_answer" placeholder="✍️ Câu trả lời của bạn"></textarea>
+    <textarea id="correct_answer" placeholder="✅ Đáp án đúng"></textarea>
+
+    <button class="main-btn" onclick="analyze()">🚀 Phân tích</button>
+
+    <div id="result" class="result-card"></div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
