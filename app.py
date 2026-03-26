@@ -1,12 +1,9 @@
 import flask
-import groq
-from groq import Groq
-import os
-
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+import openai
 from flask import Flask, render_template, request, jsonify
+from openai import OpenAI
 app = Flask(__name__)
-
+client = Grok(api_key="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")
 
 @app.route("/")
 def home():
@@ -52,7 +49,7 @@ Phân loại lỗi:
 """
 
     response = client.chat.completions.create(
-        model="llama3-70b-8192",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
     )
 
