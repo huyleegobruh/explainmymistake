@@ -49,7 +49,7 @@ Phân loại lỗi:
 """
 
     response = client.chat.completions.create(
-        model="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",
+        model="llama3-70b-8192",
         messages=[{"role": "user", "content": prompt}],
     )
 
