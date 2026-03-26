@@ -1,9 +1,9 @@
 import flask
-import grok
+import groq
 from flask import Flask, render_template, request, jsonify
-from grok import Grok
+from groq import Groq
 app = Flask(__name__)
-client = Grok(api_key="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")
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 @app.route("/")
 def home():
